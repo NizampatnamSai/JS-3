@@ -17,3 +17,7 @@ var h2=document.getElementById('h2');
 var h21=h2.innerHTML;
 h21=56;
 h2.innerHTML=h21;
+var add=(a=2,b=3)=>a+b;
+console.log(add(4,5));
+var date=day => day+'th';
+console.log(date(2))
