@@ -13,3 +13,7 @@ var add=(x=3,y=5)=>{
     console.log(z)
 }
 add(65,65)
+var h2=document.getElementById('h2');
+var h21=h2.innerHTML;
+h21=56;
+h2.innerHTML=h21;
