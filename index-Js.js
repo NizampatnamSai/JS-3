@@ -36,6 +36,7 @@ const b =document.querySelectorAll('input')[1];
 const add=document.querySelector('#add');
 const mult=document.querySelector('#multiply');
 const resultbox=document.querySelector('.result')
+ const Substrct=document.querySelector('#Substrct')
 /*
 const sum =()=> {
     const result=parseInt(a.value)+parseInt(b.value);
@@ -48,19 +49,30 @@ add.addEventListener('click',sum)
  }
  mult.addEventListener('click',multiply)*/
 
- const calculate = (operation='add') => {
-
-    if (operation == 'add') {
-        console.log('adding')
-    } else if (operation == 'multiply') {
-        console.log('multiply')
+ const calculate = (operation) => {
+    switch(operation) {
+        case "add":
+    
+            const result=parseInt(a.value)+parseInt(b.value);
+            resultbox.innerHTML=result;
+            break;
+        
+        case 'multiply':
+            const multi=parseInt(a.value)*parseInt(b.value);
+             resultbox.innerHTML=multi;
+               break;
+        case 'Substrct':
+            const subs=parseInt(a.value)-parseInt(b.value);
+             resultbox.innerHTML=subs;
+            
+         default:
+          alert('somethig went wrong!')
     }
 
 }
 
-add.addEventListener('click', function(){
-    calculate('add')
-})
-multiply.addEventListener('click', function(){
-    calculate('multiply')
+add.addEventListener('click', ()=>calculate('add'))
+multiply.addEventListener('click',()=>calculate('multiply'))
+Substrct.addEventListener('click',()=>{
+    calculate('Substrct')
 })
