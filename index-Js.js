@@ -30,3 +30,4 @@ setInterval(function()
     ch2.innerHTML=value;
    
 },500)
+alert('Js-4!')
