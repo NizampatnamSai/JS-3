@@ -20,7 +20,7 @@ setInterval(() => {
     h2.innerHTML=h21  
 }, 1000);*/
 
-
+/*
 var ch2=document.getElementById('h2');
 var value2=ch2.innerHTML;
 var value=value2;
@@ -30,4 +30,37 @@ setInterval(function()
     ch2.innerHTML=value;
    
 },500)
-alert('Js-4!')
+alert('Js-4!')*/
+const a =document.querySelectorAll('input')[0];
+const b =document.querySelectorAll('input')[1];
+const add=document.querySelector('#add');
+const mult=document.querySelector('#multiply');
+const resultbox=document.querySelector('.result')
+/*
+const sum =()=> {
+    const result=parseInt(a.value)+parseInt(b.value);
+    resultbox.innerHTML=result;
+}
+add.addEventListener('click',sum)
+ const multiply=()=>{
+     const multi=parseInt(a.value)*parseInt(b.value);
+     resultbox.innerHTML=multi;
+ }
+ mult.addEventListener('click',multiply)*/
+
+ const calculate = (operation='add') => {
+
+    if (operation == 'add') {
+        console.log('adding')
+    } else if (operation == 'multiply') {
+        console.log('multiply')
+    }
+
+}
+
+add.addEventListener('click', function(){
+    calculate('add')
+})
+multiply.addEventListener('click', function(){
+    calculate('multiply')
+})
